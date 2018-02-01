@@ -1,0 +1,28 @@
+body {
+  margin-top: 3rem;
+}
+
+.message {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid;
+  background-color: transparent;
+}
+
+.message-notice {
+  border-color: #8D983B;
+  color: #8D983B;
+  
+}
+
+.message-alert {
+  border-color: #920F4B;
+  color: #920F4B;
+}
+
+#error-explanation > p,
+#error-explanation > ul > li {
+  color: #920F4B;
+}

@@ -1,0 +1,26 @@
+<h1>Event Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @event_categories.each do |event_category| %>
+      <tr>
+        <td><%= event_category.name %></td>
+        <td><%= event_category.description %></td>
+        <td><%= link_to 'Show', admin_event_category_path(event_category) %></td>
+        <td><%= link_to 'Edit', edit_admin_event_category_path(event_category) %></td>
+        <td><%= link_to 'Destroy', admin_event_category_path(event_category), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event Category', new_admin_event_category_path %>

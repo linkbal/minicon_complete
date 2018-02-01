@@ -1,0 +1,32 @@
+<p>
+  <strong>Category:</strong>
+  <%= @event.event_category.name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @event.title %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @event.location %>
+</p>
+
+<p>
+  <strong>Start At:</strong>
+  <%= @event.start_at.strftime('%Y/%m/%d %H:%M') %>
+</p>
+
+<p>
+  <strong>Ticket Price:</strong>
+  <%= @event.ticket_price %>円
+</p>
+
+<p>
+  <strong>Ticket Quantity:</strong>
+  <%= @event.ticket_quantity %>
+</p>
+
+<%= link_to 'Edit', edit_admin_event_path(@event) %> |
+<%= link_to 'Back', admin_events_path %>

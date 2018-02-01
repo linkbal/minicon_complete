@@ -1,0 +1,2 @@
+class ConsumerBaseController < ApplicationController
+end

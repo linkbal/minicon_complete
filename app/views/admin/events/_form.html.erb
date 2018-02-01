@@ -1,0 +1,37 @@
+<%= form_with(model: [:admin, event], local: true) do |form| %>
+  <%= render 'admin/shared/form_errors', entity: event %>
+  
+  <div class="field">
+    <%= form.label :event_category_id %>
+    <%= form.text_field :event_category_id, id: :event_event_category_id %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :event_title %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :event_location %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :start_at %>
+    <%= form.datetime_select :start_at, id: :event_start_at %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :ticket_price %>
+    <%= form.text_field :ticket_price, id: :event_ticket_price %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :ticket_quantity %>
+    <%= form.text_field :ticket_quantity, id: :event_ticket_quantity %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

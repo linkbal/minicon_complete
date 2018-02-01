@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Minicon</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'admin',       media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <% flash.each do |type, message| %>
+            <%= content_tag :div, message, class: "message message-#{type}" %>
+          <% end %>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
