@@ -1,6 +1,8 @@
 <% if entity.errors.any? %>
   <div id="error-explanation">
-    <p>The form contains <%= pluralize(entity.errors.count, "error") %>:</p>
+    <div class="message message-alert">
+      The form contains <%= pluralize(entity.errors.count, "error") %>:
+    </div>
     <ul>
     <% entity.errors.full_messages.each do |message| %>
       <li><%= message %></li>
