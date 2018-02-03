@@ -1,47 +1,21 @@
 <div class="row ">
-  <div class="eight columns">
-    <card class="event-card">
-      <h4>Nice Konkatsu Event</h4>
-      <img src="http://via.placeholder.com/540x300">
-      <div class="row">
-        <div class="six columns">
-          <p class="major-info">銀座</p>
-          <p class="major-info">2018/02/03 18:00</p>
+  <% @events.each do |event| %>
+    <div class="eight columns">
+      <card class="event-card">
+        <h4><%= event.title %></h4>
+        <img src="http://via.placeholder.com/540x300">
+        <div class="row">
+          <div class="six columns">
+            <p class="major-info"><%= event.location %></p>
+            <p class="major-info"><%= event.start_at.strftime('%Y/%m/%d %H:%M') %></p>
+          </div>
+          <div class="six columns">
+            <p class="ticket-price"><%= event.ticket_price %>円</p>
+            <a class="button button-primary">Purchase</a>
+          </div>
         </div>
-        <div class="six columns">
-          <p class="ticket-price">5000円</p>
-          <a class="button button-primary">Purchase</a>
-        </div>
-      </div>
-    </card>
-    <card class="event-card">
-      <h4>Nice Konkatsu Event</h4>
-      <img src="http://via.placeholder.com/540x300">
-      <div class="row">
-        <div class="six columns">
-          <p class="major-info">銀座</p>
-          <p class="major-info">2018/02/03 18:00</p>
-        </div>
-        <div class="six columns">
-          <p class="ticket-price">5000円</p>
-          <a class="button button-primary">Purchase</a>
-        </div>
-      </div>
-    </card>
-    <card class="event-card">
-      <h4>Nice Konkatsu Event</h4>
-      <img src="http://via.placeholder.com/540x300">
-      <div class="row">
-        <div class="six columns">
-          <p class="major-info">銀座</p>
-          <p class="major-info">2018/02/03 18:00</p>
-        </div>
-        <div class="six columns">
-          <p class="ticket-price">5000円</p>
-          <a class="button button-primary">Purchase</a>
-        </div>
-      </div>
-    </card>
+      </card>
+    <% end %>
   </div>
   <sidebar class="four columns categories-sb">
     <card class="categories-card">
