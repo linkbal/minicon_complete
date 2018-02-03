@@ -1,0 +1,38 @@
+// Place all the styles related to the Events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.event-card, .categories-sb {
+  margin-top: 2em;
+  margin-top: 3em;
+}
+
+.event-card h4 {
+  background-color: #FFE486;
+}
+
+.categories-sb ul {
+  margin-top: 2rem;
+  list-style: none;
+}
+
+.categories-sb a {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.categories-card h4 {
+  background-color: #C5E2E8;
+}
+
+.categories-card ul {
+  margin-bottom: 160px;
+}
+
+.major-info {
+  font-size: 24px;
+}
+
+.ticket-price {
+  font-size: 20px;
+}

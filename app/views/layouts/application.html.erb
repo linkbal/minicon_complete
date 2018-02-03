@@ -9,6 +9,35 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header id="page-header">
+      <div class="container">
+        <div class="row">
+          <div class="twelve columns">
+            <%= link_to root_path do %>
+              <%= image_tag 'minicon_logo_56.png', id: 'minicon-logo' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
+  <footer id="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <%= image_tag 'minicon_icon_96.png', id: 'minicon-icon' %>
+          Copyright (c) minicon All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
 </html>

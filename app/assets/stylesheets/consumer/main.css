@@ -1,0 +1,63 @@
+card {
+  background: #fff;
+  display: block;
+  padding: 2rem;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .2);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+card hr:not([class]), card hr[xx] {
+  margin: 1rem 0;
+}
+
+card:last-child {
+  margin-bottom: 0;
+}
+
+card > img:not([class]), card > img[xx] {
+  width: calc(100% + 4rem);
+  max-width: none;
+  margin: 0 0 2rem -2rem;
+  display: block;
+}
+
+card > img:not([class]):first-child, card > img[xx]:first-child {
+  margin: -2rem 0 2rem -2rem;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+card > img:not([class]):last-child, card > img[xx]:last-child {
+  margin: 0 0 -2rem -2rem;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+card > h4:not([class]):first-child, card > h4[xx]:first-child {
+  margin: -2rem -2rem 0 -2rem;
+  padding: 2rem;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+#page-header {
+  background-color: #CCE6EB;
+}
+
+#page-footer {
+  margin-top: 3em;
+  padding: 2rem;
+  background-color: #396887;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+#minicon-logo {
+  margin-top: 8px;
+}
+
+#minicon-icon {
+  display: block;
+  margin: 1rem auto;
+}
