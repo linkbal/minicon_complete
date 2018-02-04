@@ -4,6 +4,7 @@
     <title>Minicon</title>
     <%= csrf_meta_tags %>
 
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -12,9 +13,38 @@
     <header id="page-header">
       <div class="container">
         <div class="row">
-          <div class="twelve columns">
+          <div class="nine columns">
             <%= link_to root_path do %>
               <%= image_tag 'minicon_logo_56.png', id: 'minicon-logo' %>
+            <% end %>
+          </div>
+          <div id="header-links" class="three columns">
+            <% if user_signed_in? %>
+              <div class="header-link">
+                <%= link_to edit_user_registration_path do %>
+                  <i class="fas fa-user fa-2x header-link-icon"></i>
+                  <span class="header-link-text">Profile</span>
+                <% end %>
+              </div>
+              <div class="header-link">
+                <%= link_to destroy_user_session_path, method: :delete do %>
+                  <i class="fas fa-sign-out-alt fa-2x header-link-icon"></i>
+                  <span class="header-link-text">Log Out</span>
+                <% end %>
+              </div>
+            <% else %>
+              <div class="header-link">
+                <%= link_to new_user_registration_path do %>
+                  <i class="fas fa-user-plus fa-2x header-link-icon"></i>
+                  <span class="header-link-text">Sign Up</span>
+                <% end %>
+              </div>
+              <div class="header-link">
+                <%= link_to new_user_session_path do %>
+                  <i class="fas fa-sign-in-alt fa-2x header-link-icon"></i>
+                  <span class="header-link-text">Log In</span>
+                <% end %>
+              </div>
             <% end %>
           </div>
         </div>

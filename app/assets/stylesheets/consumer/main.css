@@ -61,3 +61,28 @@ card > h4:not([class]):first-child, card > h4[xx]:first-child {
   display: block;
   margin: 1rem auto;
 }
+
+#header-links {
+  text-align: right;
+}
+
+.header-link {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 2rem;
+  text-align: center;
+}
+
+.header-link a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.header-link-icon {
+  display: block;
+}
+
+.header-link-text {
+  margin-top: 0;
+  font-size: 1rem;
+}
