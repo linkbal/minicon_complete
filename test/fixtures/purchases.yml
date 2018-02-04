@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  event_id: 1
+  status: 1
+  ticket_quantity: 1
+  total_price: 1
+
+two:
+  user_id: 1
+  event_id: 1
+  status: 1
+  ticket_quantity: 1
+  total_price: 1
