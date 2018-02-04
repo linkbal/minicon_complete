@@ -62,6 +62,21 @@ card > h4:not([class]):first-child, card > h4[xx]:first-child {
   margin: 1rem auto;
 }
 
+.message {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.message-notice {
+  background-color: #DEE79A;
+}
+
+.message-alert {
+  background-color: #FFAAAA;
+}
+
 #header-links {
   text-align: right;
 }

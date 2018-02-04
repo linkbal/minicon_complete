@@ -55,8 +55,9 @@
     <div class="container">
       <div class="row">
         <div class="twelve columns">
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
+          <% flash.each do |type, message| %>
+            <%= content_tag :div, message, class: "message message-#{type}" %>
+          <% end %>
           <%= yield %>
         </div>
       </div>
