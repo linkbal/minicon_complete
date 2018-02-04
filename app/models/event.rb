@@ -1,5 +1,6 @@
 class Event < ApplicationRecord
   belongs_to :event_category
+  has_many :purchases
   
   validates :event_category, :title, :location, :start_at, :ticket_price, :ticket_quantity, presence: true
   validates :event_category, :title, :location, :start_at, :ticket_price, :ticket_quantity, presence: true
