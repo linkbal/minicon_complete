@@ -11,7 +11,7 @@
           </div>
           <div class="six columns">
             <p class="ticket-price"><%= event.ticket_price %>円</p>
-            <a class="button button-primary">Purchase</a>
+            <%= link_to 'Purchase', new_event_purchase_path(event), class: 'button button-primary' %>
           </div>
         </div>
       </card>

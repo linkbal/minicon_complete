@@ -1,0 +1,36 @@
+<h3>Purchase Details</h3>
+<p>Please review the details of your purchase before clicking the confirmation button.</p>
+<%= form_with model: @purchase, url: event_purchases_path(@event) do |form| %>
+  <%= form.hidden_field(:event_id, value: @event.id) %>
+  <%= form.hidden_field(:ticket_quantity, value: 1) %>
+  <%= form.hidden_field(:total_price, value: @event.ticket_price) %>
+  <div class="row">
+    <div class="eight columns">
+      <card>
+        <table class="u-full-width">
+          <thead>
+            <tr>
+              <th>Event Title</th>
+              <th>Ticket Price</th>
+              <th>Ticket Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= @event.title %></td>
+              <td><%= @event.ticket_price %>円</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+      </card>
+    </div>
+    <div id="order-confirmation" class="four columns">
+      <card class="order-confirmation-card">
+        <h4>Order Total</h4>
+        <h5><%= @event.ticket_price %>円</h5>
+        <%= form.submit 'Confirm', class: 'button button-primary', data: { confirm: 'Your order will be processed. Are you sure?' } %>
+      </card>
+    </div>
+  </div>
+<% end %>

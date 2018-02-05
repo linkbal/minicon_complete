@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="twelve rows">
+    <card class="purchases-card">
+      <h4>Purchases History</h4>
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Order Date</th>
+            <th>Event Name</th>
+            <th>Event Location</th>
+            <th>Event Start</th>
+            <th>Tickets</th>
+            <th>Order Total</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @purchases.each do |purchase| %>
+            <tr>
+              <td><%= purchase.created_at.strftime('%Y/%m/%d') %></td>
+              <td><%= purchase.event.title %></td>
+              <td><%= purchase.event.location %></td>
+              <td><%= purchase.event.start_at.strftime('%Y/%m/%d %H:%M') %></td>
+              <td><%= purchase.ticket_quantity %></td>
+              <td><%= purchase.total_price %></td>
+              <td><%= purchase.status %></td>
+            </tr>
+          <% end %>
+        </tbody>
+    </card>
+    </table>
+  </div>
+</div>
