@@ -3,7 +3,6 @@ class Event < ApplicationRecord
   has_many :purchases
   
   validates :event_category, :title, :location, :start_at, :ticket_price, :ticket_quantity, presence: true
-  validates :event_category, :title, :location, :start_at, :ticket_price, :ticket_quantity, presence: true
   validates :title, length: { maximum: 80 }, uniqueness: true
   validates :location, length: { maximum: 20 }
   validates :ticket_price, :ticket_quantity, numericality: { only_integer: true, greater_than: 0 }
