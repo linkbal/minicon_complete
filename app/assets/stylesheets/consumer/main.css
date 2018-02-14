@@ -78,13 +78,14 @@ card > h4:not([class]):first-child, card > h4[xx]:first-child {
 }
 
 #header-links {
-  text-align: right;
+  text-align: center;
 }
 
 .header-link {
   display: inline-block;
   margin-top: 10px;
-  margin-right: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   text-align: center;
 }
 
@@ -100,4 +101,10 @@ card > h4:not([class]):first-child, card > h4[xx]:first-child {
 .header-link-text {
   margin-top: 0;
   font-size: 1rem;
+}
+
+@media (min-width: 550px) {
+  #header-links {
+    text-align: right;
+  }
 }
