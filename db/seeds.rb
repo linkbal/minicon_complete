@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+EventCategory.create!([
+  {name: "Konkatsu", description: "Konkatsu events"},
+  {name: "Koikatsu", description: "Koikatsu events"},
+  {name: "Gourmet", description: "Gourmet themed events"}
+])
+Event.create!([
+  {title: "Nice Konkatsu Event", location: "銀座", start_at: "2018-03-28 09:00:00", ticket_price: 5000, ticket_quantity: 30, event_category_id: 1},
+  {title: "Great Koikatsu Event", location: "渋谷", start_at: "2018-04-05 09:00:00", ticket_price: 4000, ticket_quantity: 25, event_category_id: 2},
+  {title: "Gourmet Themed Event", location: "渋谷", start_at: "2018-03-13 14:36:00", ticket_price: 6000, ticket_quantity: 35, event_category_id: 3}
+])
